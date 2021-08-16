@@ -15,13 +15,11 @@ const App = () => {
       <Container>
         <Row className='mt-5 justify-content-center'>
           <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/game' component={Game} exact/>
-            <Route exact path='/:id' component={DetailPage} exact/>
-            <Route exact path='/:id/:info' component={SuperDetailed} />
-            
-            <Route />
-          </Switch>
+              <Route exact path='/' ><Home/></Route>
+              <Route exact path='/game'><Game/></Route>
+              <Route exact path='/:id' ><DetailPage/></Route>
+              <Route exact path='/:id/:info' component={SuperDetailed} />
+            </Switch>
         </Row>
       </Container>
     </main>
