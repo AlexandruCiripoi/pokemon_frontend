@@ -29,6 +29,33 @@
   color: white;
 }
 
+.naviColor{
+  color: yellow !important;
+  background-color: blue !important;
+  font-weight: bold;
+}
+
+.clickBall {
+  border: none;
+  background-color: white;
+}
+
+.tableHead {
+  font-weight: bold;
+}
+
+.winnerClass {
+  text-align: center;
+  color: red;
+  font-size: 2rem;
+}
+
+.gameScreen {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .App-link {
   color: #61dafb;
 }

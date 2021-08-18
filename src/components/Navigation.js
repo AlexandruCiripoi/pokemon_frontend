@@ -5,19 +5,22 @@ import Container from 'react-bootstrap/Container';
 
 const Navigation = () => {
   return (
-    <Navbar bg='light' expand='lg'>
-      <Container>
-        <Navbar.Brand as={Link} to='/'>
+    <Navbar bg='light' expand='lg'className="naviColor">
+      <Container >
+        <Navbar.Brand className="naviColor" as={Link} to='/'>
           Pokemon
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='ms-auto'>
-            <Nav.Link as={NavLink} to='/' exact>
+            <Nav.Link className="naviColor" as={NavLink} to='/' exact>
               Home
             </Nav.Link>
-            <Nav.Link as={NavLink} to='/game' exact>
+            <Nav.Link className="naviColor" as={NavLink} to='/game' exact>
               Game
+            </Nav.Link>
+            <Nav.Link className="naviColor" as={NavLink} to='/battlehistory' exact>
+              Battle history
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

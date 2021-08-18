@@ -6,6 +6,7 @@ import Home from './components/Home';
 import DetailPage from './components/DetailPage';
 import SuperDetailed from './components/SuperDetailed';
 import Game from './components/Game';
+import BattleHistory from './components/BattleHistory';
 import './App.css';
 
 const App = () => {
@@ -17,7 +18,8 @@ const App = () => {
           <Switch>
               <Route exact path='/' ><Home/></Route>
               <Route exact path='/game'><Game/></Route>
-              <Route exact path='/:id' ><DetailPage/></Route>
+              <Route exact path='/battlehistory'><BattleHistory/></Route>
+              <Route exact path='/pokemons/:id' ><DetailPage/></Route>
               <Route exact path='/:id/:info' component={SuperDetailed} />
             </Switch>
         </Row>

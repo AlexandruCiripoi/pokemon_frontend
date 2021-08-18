@@ -52,7 +52,7 @@ const DetailPage = () => {
       <h1>{pokemon.name.english}</h1>
       </Row>
       <Row>
-      <img src={"https://assets.pokemon.com/assets/cms2/img/misc/countries/at/country_detail_pokemon.png"} />
+      <img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${String(pokemon.id).padStart(3, '0')}.png`} />
     </Row>
     <Row>
       <h2>{pokemon.type.map(t => (<p>{t}</p>))}</h2>
