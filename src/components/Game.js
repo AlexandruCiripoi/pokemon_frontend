@@ -23,12 +23,13 @@ const Game = () => {
   const [winnerState, setWinnerState] = useState();
   const [loserState, setLoserState] = useState();
   const [categoryState, setCategorysState] = useState();
-  const [battle, setBattle] = useState();
   const { pokePlayer, opponent } = useContext(PokePlayerContext)
 
   useEffect(() => {
   
     const postStat = async () => {
+      console.log(winnerState)
+      console.log(loserState)
       try {
         setLoading(true);
         const battleLog = {
@@ -51,8 +52,8 @@ const Game = () => {
         }
       }
     };
-    !error &&  postStat();
-  }, [ error, battle]);
+    !error && winnerState && loserState && postStat();
+  }, [ error, winnerState, loserState]);
 
   const handleClickedBall= async () => {
     const cat = Math.floor(Math.random() * 4)
@@ -64,7 +65,6 @@ const Game = () => {
       setLoserState(pokePlayer.name.english)
       setWinnerState(opponent.name.english)
     }
-    setBattle(opponent.name.english)
   } 
   
   if (error) return <Alert variant='danger'>{error}</Alert>;

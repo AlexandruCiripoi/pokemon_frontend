@@ -43,6 +43,9 @@ const Opponent = () => {
     };
     !error && getPosts();
   }, [error]);
+
+
+  //  !!!! needs buttun to trigger the useEffect to stp refreshing
   
   if (error) return <Alert variant='danger'>{error}</Alert>;
   if (loading) return <Spinner animation='border' variant='primary' />;
