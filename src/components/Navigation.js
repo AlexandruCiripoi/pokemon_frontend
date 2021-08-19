@@ -5,8 +5,8 @@ import Container from 'react-bootstrap/Container';
 
 const Navigation = () => {
   return (
-    <Navbar bg='light' expand='lg'className="naviColor">
-      <Container >
+    <Navbar bg='light' expand='lg'className="naviColor sticky-left">
+      <Container className="naviColor sticky-left">
         <Navbar.Brand className="naviColor" as={Link} to='/'>
           Pokemon
         </Navbar.Brand>
